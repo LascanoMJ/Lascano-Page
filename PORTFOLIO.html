@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="logo.jpg">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap');
+
+        body {
+            background: linear-gradient( #000, #3e3e3e);
+            font-family: 'Courier New', Courier, monospace;
+            width:100%;
+            height: 100%;
+        }
+
+        h1 {
+            font-family:'Caesar Dressing';
+        }
+
+        h3 {
+            font-family: Courier;
+        }
+
+        #description {
+            margin: 5%;
+        }
+
+		.header { 
+            grid-area: header;
+            width:100%;
+        }
+
+		.left { 
+            grid-area: left;
+            max-width: fit-content; 
+            width:100%;
+        }
+        #left {
+            display: flex;
+            text-align: left;
+            margin-left: 5%;
+            
+        }
+
+		.creations { 
+            grid-area: main;
+            width:100%;
+        }
+
+        img {
+            max-width: 350px;
+            max-height: 600px;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border-radius: 16px;
+            border-color: #fff;
+            border-spacing: 10px;
+        }
+		
+		.grid-container {
+		    display: grid;
+		    grid-template-areas:
+                'header header header header header header'
+                'left main main main main main'
+                'footer footer footer footer footer footer';
+		    gap: 10px;
+		    background-color: transparent;
+		    padding: 10px;
+            color: #FFF;
+		}
+		
+		.grid-container > div {
+		    background-color: #161616;
+		    text-align: center;
+		    padding: 20px 0;
+		    font-size: 30px;
+		}
+
+        a:link {
+            color:#ffffff;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color:#ffffff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: rgb(255, 204, 0);
+            text-decoration: none;
+        }
+
+        .footer { 
+            grid-area: footer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .button-container {
+            display: flex;
+            margin-top: 20px;
+            margin: 0;
+        }
+    
+        .button-container button {
+            background-color: transparent;
+            color: white;
+            border-color: #FFF;
+            border-style: groove;
+            font-size: auto;
+            padding: 16px 20px;
+            border-radius: 16px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #616161;
+        }
+
+        .button-container button:active {
+            box-shadow: 0 5px #000000;
+            transform: translateY(4px);
+        }
+
+        @media screen and (max-width: 768px) {
+            .grid-container {
+                grid-template-areas:
+                    'header header header header header header'
+                    'main main main main main main'
+                    'footer footer footer footer footer footer';
+            }
+
+            .left {
+                grid-area: main;
+                max-width: 100%;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 16px;
+                border-color: #fff;
+                border-spacing: 10px;
+            }
+
+            h1, h3 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .button-container button {
+                padding: 10px 15px;
+                font-size: 16px;
+            }
+        }
+	</style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var backButton = document.getElementById("Back");
+
+            backButton.addEventListener("click", function() {
+                var backURL = "index.html";
+                window.location.href = backURL;
+            });
+        });
+    </script>
+
+	<title>PORTFOLIO</title>
+
+</head>
+<body>
+
+	<div class="grid-container">
+		<div class="header">
+            <h1>PORTFOLIO</h1>
+        </div>
+		<div class="left">
+            <h1>CONTENTS</h1>
+            <p id="left"><a href="#creations-me">- Mobile Photography</a></p>
+            <p id="left"><a href="#creations-sp">-- Self Photoshoot</a></p>
+            <p id="left"><a href="#creations-ed">-- Edits</a></p>
+            <p id="left"><a href="#creations-mw">- Make-up Works</a></li>
+            <p id="left"><a href="#creations-dtd">- Drawings</a></p>
+        </div>
+		<div class="creations">
+            <h1>CREATIONS</h1>
+            <div>
+                <h3 id="creations-me">MOBILE PHOTOGRAPHY</h3>
+                <p id="description">Whenever I feel like it's a perfect time to take photos, I just grab my phone and take a lot of shots with different angles📸.</p>
+                <img src="Photo&Edits/p1.jpg" style="width:100%;" alt="m.Photography">
+                <img src="Photo&Edits/p2.jpg" style="width:100%;" alt="m.Photography">
+                <img src="Photo&Edits/p3.jpg" style="width:100%;" alt="m.Photography">
+                <img src="Photo&Edits/p4.jpg" style="width:100%;" alt="m.Photography">
+                <img src="Photo&Edits/p5.jpg" style="width:100%;" alt="m.Photography">
+                <img src="Photo&Edits/p6.jpg" style="width:100%;" alt="m.Photography">
+                <img src="Photo&Edits/p7.jpg" style="width:100%;" alt="m.Photography">
+                <img src="Photo&Edits/p8.jpg" style="width:100%;" alt="m.Photography">
+                <img src="Photo&Edits/p9.jpg" style="width:100%;" alt="m.Photography">
+                <h3 id="creations-sp">SELF PHOTOSHOOT</h3>
+                <p>Sometimes random ideas come into my mind and when that happens, I will just grab my phone, setup somewhere inside the house, and pre myself📷.</p>
+                <img src="Photo&Edits/sp1.jpg" style="width:100%;" alt="SelfPhotog">
+                <img src="Photo&Edits/sp2.jpg" style="width:100%;" alt="SelfPhotog">
+                <img src="Photo&Edits/sp3.jpg" style="width:100%;" alt="SelfPhotog">
+                <img src="Photo&Edits/sp4.jpg" style="width:100%;" alt="SelfPhotog">
+                <h3 id="creations-ed">EDITS</h3>
+                <p>I edit photos sometimes just for fun.</p>
+                <img src="Photo&Edits/ed1.jpg" style="width:100%;" alt="Edits">
+                <img src="Photo&Edits/ed2.jpg" style="width:100%;" alt="Edits">
+                <img src="Photo&Edits/ed3.jpg" style="width:100%;" alt="Edits">
+            </div>
+            <div id="creations-mw">
+                <h3>MAKE-UP WORKS</h3>
+                <p>These are some of my works since grade 7 up to last year. I do this yearly with my sister, especially every Halloween season👻.</p>
+                <img src="Mekap/mk1.jpg" style="width:100%;" alt="makeup works">
+                <img src="Mekap/mk2.png" style="width:100%;" alt="makeup works">
+                <img src="Mekap/mk3.jpg" style="width:100%;" alt="makeup works">
+                <img src="Mekap/mk4.jpg" style="width:100%;" alt="makeup works">
+                <img src="Mekap/mk5.jpg" style="width:100%;" alt="makeup works">
+                <img src="Mekap/mk6.jpeg" style="width:100%;" alt="makeup works">
+                <img src="Mekap/mk7.jpg" style="width:100%;" alt="makeup works">
+                <img src="Mekap/mk8.jpg" style="width:100%;" alt="makeup works">
+                <img src="Mekap/mk9.jpeg" style="width:100%;" alt="makeup works">
+            </div>
+            <div id="creations-dtd">
+                <h3>DRAWINGS</h3>
+                <p>Here are some of the drawings that I did way back in my junior and senior highschool days.</p>
+                <img src="Drawings/d1.jpg" style="width:100%;" alt="drawing">
+                <img src="Drawings/d2.jpg" style="width:100%;" alt="drawing">
+                <img src="Drawings/d3.jpg" style="width:100%;" alt="drawing">
+                <img src="Drawings/d4.jpg" style="width:100%;" alt="drawing">
+                <img src="Drawings/d5.png" style="width:100%;" alt="drawing">
+                <img src="Drawings/d6.png" style="width:100%;" alt="drawing">
+            </div>
+        </div>  
+		<div class="footer">
+            <div class="button-container">
+                <button id="Back">BACK TO PROFILE PAGE</button>
+              </div>
+        </div>
+	</div>
+
+</body>
+</html>
